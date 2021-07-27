@@ -23,7 +23,7 @@ export function Chat() {
     <Box boxShadow={3} className={classes.chatBox}>
       <Message
         user={"Tzahi Mizrahi"}
-        content={"This is sssssssssssssssssssssssssssssssa message"}
+        content={"This is a message"}
         time={"13:00"}
       ></Message>
     </Box>

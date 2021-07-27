@@ -149,13 +149,8 @@ export default function NavBar() {
         </IconButton>
         <p>Chat</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
+      <MenuItem>
+        <IconButton aria-label="show chat messages" color="inherit">
           <AccountCircle />
         </IconButton>
         <p>Profile</p>
@@ -180,7 +175,7 @@ export default function NavBar() {
             variant="h4"
             noWrap
             to="/"
-            style={{ textDecoration: 'none', color: "#ffffff" }}
+            style={{ textDecoration: "none", color: "#ffffff" }}
             component={Link}
           >
             Communit 🌐
@@ -213,14 +208,7 @@ export default function NavBar() {
                 <MailIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
+            <IconButton color="inherit" to="/profile" component={Link}>
               <AccountCircle />
             </IconButton>
           </div>

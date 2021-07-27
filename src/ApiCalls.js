@@ -1,4 +1,6 @@
 import axios from "axios";
+const SERVER_ADDRESS = "http://20.101.62.114";
+
 
 export async function getCommunities() {
   return [
@@ -15,4 +17,8 @@ export async function getCommunities() {
       location: "Menahem Begin 29",
     },
   ];
+}
+
+export async function getUserById(id) {
+  await (axios.get(`${SERVER_ADDRESS}`)).data;
 }

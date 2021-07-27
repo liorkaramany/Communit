@@ -13,5 +13,5 @@ const useStyles = makeStyles({
 export function Intro() {
   const classes = useStyles();
 
-  return <div className={[classes.introContainer, "animate__animated", "animate__pulse"]}></div>;
+  return <div className={[classes.introContainer]}>STARTUP!</div>;
 }

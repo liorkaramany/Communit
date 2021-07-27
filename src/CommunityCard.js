@@ -27,7 +27,7 @@ const useStyles = makeStyles({
   },
 });
 
-export function CommunityCard({ community }) {
+export function CommunityCard({ community, isInside }) {
   const classes = useStyles();
 
   return (
@@ -51,9 +51,15 @@ export function CommunityCard({ community }) {
           justifyContent="flex-end"
           className={classes.actionsRow}
         >
-          <Button variant="contained" size="large" color="primary">
-            Join Community
-          </Button>
+          {!isInside ? (
+            <Button variant="contained" size="large" color="primary">
+              Join Community
+            </Button>
+          ) : (
+            <Button variant="contained" size="large" color="secondary">
+              Leave Community
+            </Button>
+          )}
         </Box>
       </CardContent>
     </Card>
