@@ -17,24 +17,22 @@ function App() {
   const classes = useStyles();
 
   return (
-    <Router>
-      <NavBar></NavBar>
-      <Switch>
-        <Route exact path="/">
-          <Communities />
-        </Route>
-        <Route exact path="/chat">
-          <Chat />
-        </Route>
-        <Box className={classes.root}>
-          <Container maxWidth="md">
-            <div className="App">
-              <Communities></Communities>
-            </div>
-          </Container>
-        </Box>
-      </Switch>
-    </Router>
+    <div className="App">
+      <Router>
+        <NavBar></NavBar>
+        <Container maxWidth="lg">
+          <Switch>
+            <Route exact path="/">
+              <Communities />
+            </Route>
+            <Route exact path="/chat">
+              <Chat />
+            </Route>
+            <Box className={classes.root}></Box>
+          </Switch>
+        </Container>
+      </Router>
+    </div>
   );
 }
 
