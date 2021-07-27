@@ -21,7 +21,6 @@ const useStyles = makeStyles({
     marginRight: "1rem",
   },
   actionsRow: {
-    marginBottom: "1rem",
     marginLeft: "1rem",
     marginRight: "1rem",
     textAlign: "right",
@@ -38,7 +37,7 @@ export function CommunityCard({ community }) {
           {community.name}
         </Typography>
         <Typography color="textSecondary">
-          {community.numOfParticipants} participants
+          {community.numOfParticipants} participants at {community.location}
         </Typography>
         <Typography
           variant="body2"
@@ -47,16 +46,16 @@ export function CommunityCard({ community }) {
         >
           {community.description}
         </Typography>
+        <Box
+          display="flex"
+          justifyContent="flex-end"
+          className={classes.actionsRow}
+        >
+          <Button variant="contained" size="large" color="primary">
+            Join Community
+          </Button>
+        </Box>
       </CardContent>
-      <Box
-        display="flex"
-        justifyContent="flex-end"
-        className={classes.actionsRow}
-      >
-        <Button variant="contained" size="large" color="primary">
-          Join Community
-        </Button>
-      </Box>
     </Card>
   );
 }
