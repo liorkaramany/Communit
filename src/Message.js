@@ -7,6 +7,9 @@ const useStyles = makeStyles({
     maxWidth: "20rem",
     textAlign: "left",
     lineHeight: ".5rem",
+    margin: "1rem",
+    paddingLeft: "1rem",
+    paddingRight: "1rem"
   },
 });
 
