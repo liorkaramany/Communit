@@ -4,7 +4,8 @@ import { Communities } from "./Communities";
 import { Box, Container, makeStyles } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import NavBar from "./NavBar";
-import '@fontsource/roboto';
+import "@fontsource/roboto";
+import { Chat } from "./Chat";
 
 const useStyles = makeStyles({
   root: {
@@ -18,13 +19,21 @@ function App() {
   return (
     <Router>
       <NavBar></NavBar>
-      <Box className={classes.root}>
-        <Container maxWidth="lg">
-          <div className="App">
-            <Communities></Communities>
-          </div>
-        </Container>
-      </Box>
+      <Switch>
+        <Route exact path="/">
+          <Communities />
+        </Route>
+        <Route exact path="/chat">
+          <Chat />
+        </Route>
+        <Box className={classes.root}>
+          <Container maxWidth="md">
+            <div className="App">
+              <Communities></Communities>
+            </div>
+          </Container>
+        </Box>
+      </Switch>
     </Router>
   );
 }
